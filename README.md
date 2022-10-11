@@ -32,7 +32,7 @@ sudo sysctl -w vm.max_map_count=262144
 
 - Runs full test
   
-  - `docker exec -it myapp-web node run test`
+  - `docker exec -it myapp-web npm run test`
 
 - Access sonarqube to check the reports
 

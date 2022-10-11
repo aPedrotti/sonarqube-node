@@ -2,12 +2,13 @@ version: "3"
 services:
   app:
     container_name: myapp-web
-    image: myapp-web:latest
-    build: 
-      context: ./myapp-web
-      dockerfile: Dockerfile
+    image: node:16
+    working_dir: /app
+    volumes:
+      - $PWD/myapp-web:/app
     ports:
       - "3000:3000"
+    entrypoint: ["sleep", "3600"]
     
   sonarqube:
     image: sonarqube:community
